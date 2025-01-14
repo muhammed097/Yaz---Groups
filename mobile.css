@@ -79,6 +79,21 @@
         margin-right: 15px;
         font-size: clamp(1rem, 2vw, 1.1rem);
     }
+
+    /* Our Services  */
+    .offerings-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .offering-card {
+        padding: 24px;
+    }
+
+    .offering-card h3 {
+        font-size: 20px;
+    }
+
+    /* Our Services Ends  */
 }
 
 @media (max-width: 480px) {
