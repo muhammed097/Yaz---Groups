@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hero Image Slider
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
-    const slideInterval = 5000; // 5 seconds
+    const slideInterval = 2000; // 5 seconds
 
     // Initialize first slide
     slides[0].classList.add('active');

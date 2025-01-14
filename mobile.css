@@ -71,7 +71,7 @@
 
     .hero-title {
         margin-right: 15px;
-        font-size: clamp(2rem, 4vw, 3rem);
+        font-size: clamp(1rem, 2.5vw, 2rem);
     }
 
     .hero-subtitle {
@@ -99,7 +99,8 @@
     }
 
     .hero-title {
-        font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+        font-size: clamp(1.1rem, 3.5vw, 2.5rem);
+        font-weight: bold;
     }
 
     .hero-subtitle {
