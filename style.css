@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #00205C;
+    --primary-color-dark: #001A4A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed';
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Logo image styles - uncomment when adding logo */
+/*.logo-img {
+    height: 40px;
+    width: auto;
+    margin-right: 12px;
+}*/
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.nav-menu li {
+    margin: 0 1.5rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+    background-color: #f5f5f5;
+    padding: 8px;
+}
+
+.nav-menu a.active {
+    color: var(--primary-color);
+    background-color: #f5f5f5;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    background-color: var(--primary-color);
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* Hero Image  */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Using placeholder images - replace with your actual images */
+.slide:nth-child(1) .slide-bg {
+    background-image: linear-gradient(rgba(26, 35, 126, 0.7), rgba(40, 53, 147, 0.7)), url('https://img.freepik.com/free-photo/residential-house-process-building_23-2147694705.jpg?t=st=1736823745~exp=1736827345~hmac=aa22ce39c7d572dc59e1278b70e1357ec89216efbec562e861f05b2de4fbce7b&w=996');
+}
+
+.slide:nth-child(2) .slide-bg {
+    background-image: linear-gradient(rgba(26, 35, 126, 0.7), rgba(40, 53, 147, 0.7)), url('https://img.freepik.com/free-photo/crane-construction-building_74190-5022.jpg?t=st=1736824593~exp=1736828193~hmac=ec380522d6acfec1f364714993259ac27d20456da61a6b4f2b7bb73f0784c28d&w=996');
+}
+
+.slide:nth-child(3) .slide-bg {
+    background-image: linear-gradient(rgba(26, 35, 126, 0.7), rgba(40, 53, 147, 0.7)), url('https://img.freepik.com/free-photo/people-renovating-house-concept_53876-20664.jpg?t=st=1736824634~exp=1736828234~hmac=6a2df2d78a560a83fb3c2042735cf719d3e91234132bac83e603726b7668c9d6&w=996');
+}
+
+.slide:nth-child(4) .slide-bg {
+    background-image: linear-gradient(rgba(26, 35, 126, 0.7), rgba(40, 53, 147, 0.7)), url('https://img.freepik.com/free-photo/close-up-hand-drawing-house-plan_23-2148889754.jpg?t=st=1736824666~exp=1736828266~hmac=157e7b5afb8c4a47913a9533cb5ded7070629013021036fe4950db6aec255013&w=996');
+}
+
+.hero-content {
+    position: relative;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    z-index: 2;
+}
+
+.vertical-line {
+    position: absolute;
+    left: 20px;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 60%;
+    background-color:var(--primary-color-dark);
+    z-index: 2;
+}
+
+.company-name {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-left: 40px;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    margin-left: 40px;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+    white-space:nowrap;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    margin-bottom: 2rem;
+    margin-left: 40px;
+    opacity: 0;
+    max-width: 500px;
+    line-height: 1.4;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-left: 40px;
+    padding: 15px 30px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: bold;
+    background-color: var(--primary-color-dark);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: background-color 0.3s ease, opacity 0.5s ease 0.6s, transform 0.5s ease 0.6s;
+}
+
+.hero-button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.slide.active .company-name,
+.slide.active .hero-title,
+.slide.active .hero-subtitle,
+.slide.active .hero-button {
+    opacity: 1;
+    transform: translateY(0);
+}

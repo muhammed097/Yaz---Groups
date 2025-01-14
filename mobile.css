@@ -1,0 +1,113 @@
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 2rem 0;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+    
+    .desktop-only {
+        display: none;
+    }
+    
+    .mobile-only {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    /* Hero Image  */
+    .hero-container {
+        height: 100vh;
+        padding-top: 70px; /* Add padding to account for fixed header */
+    }
+
+    .hero-content {
+        padding: 20px 15px;
+    }
+
+    .vertical-line {
+        left: 15px;
+        height: 80%;
+    }
+
+    .company-name,
+    .hero-title,
+    .hero-subtitle,
+    .hero-button {
+        margin-left: 30px;
+    }
+
+    .hero-title {
+        margin-right: 15px;
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .hero-subtitle {
+        margin-right: 15px;
+        font-size: clamp(1rem, 2vw, 1.1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero Image  */
+    .hero-container {
+        height: 100vh;
+    }
+
+    .vertical-line {
+        left: 12px;
+        width: 3px;
+    }
+
+    .company-name,
+    .hero-title,
+    .hero-subtitle,
+    .hero-button {
+        margin-left: 25px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.9rem, 1.8vw, 1rem);
+    }
+
+    .hero-button {
+        padding: 12px 24px;
+        font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    }
+}
